@@ -69,13 +69,6 @@ describe('<Navbar>', () => {
       .to.throw();
   });
 
-  it('Should add fluid variation class', () => {
-    const instance = ReactTestUtils.renderIntoDocument(
-      <Navbar fluid />
-    );
-    assert.ok(ReactTestUtils.findRenderedDOMComponentWithClass(instance, 'container-fluid'));
-  });
-
   it('Should override role attribute', () => {
     const instance = ReactTestUtils.renderIntoDocument(
       <Navbar role="banner" />

@@ -7,7 +7,6 @@ import PropTypes from 'prop-types';
 import elementType from 'prop-types-extra/lib/elementType';
 import uncontrollable from 'uncontrollable';
 
-import Grid from './Grid';
 import NavbarBrand from './NavbarBrand';
 import NavbarCollapse from './NavbarCollapse';
 import NavbarHeader from './NavbarHeader';
@@ -41,11 +40,6 @@ const propTypes = {
    * An alternative dark visual style for the Navbar
    */
   inverse: PropTypes.bool,
-  /**
-   * Allow the Navbar to fluidly adjust to the page or container width, instead
-   * of at the predefined screen breakpoints
-   */
-  fluid: PropTypes.bool,
 
   /**
    * Set a custom element for this component.
@@ -105,7 +99,6 @@ const defaultProps = {
   fixedBottom: false,
   staticTop: false,
   inverse: false,
-  fluid: false,
   collapseOnSelect: false,
 };
 
@@ -162,7 +155,6 @@ class Navbar extends React.Component {
       fixedBottom,
       staticTop,
       inverse,
-      fluid,
       className,
       children,
       ...props
